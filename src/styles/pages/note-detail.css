@@ -21,3 +21,8 @@
     max-width: 56rem;
   }
 }
+
+/* BlockNote エディタの背景をページの背景に揃える(ライト/ダーク共通) */
+.bn-container.bn-root[data-color-scheme] {
+  --bn-colors-editor-background: var(--color-background);
+}

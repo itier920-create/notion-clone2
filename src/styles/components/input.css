@@ -40,19 +40,19 @@
   display: block;
   width: 100%;
   padding: var(--spacing-2) var(--spacing-3);
-  border: 1px solid var(--color-gray-300);
+  border: 1px solid var(--color-input-border);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
 }
 
 .input-auth::placeholder {
-  color: var(--color-gray-400);
+  color: var(--color-placeholder);
 }
 
 .input-auth:focus {
   outline: none;
   border-color: var(--color-slate-500);
-  box-shadow: 0 0 0 3px rgba(100, 116, 139, 0.1);
+  box-shadow: 0 0 0 3px var(--color-ring-glow);
 }
 
 @media (min-width: 640px) {

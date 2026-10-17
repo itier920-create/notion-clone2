@@ -1,4 +1,4 @@
-import { FiChevronsLeft, FiLogOut } from "react-icons/fi";
+import { FiChevronsLeft, FiLogOut, FiMoon, FiSun } from "react-icons/fi";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -9,9 +9,11 @@ import {
 import Item from "./Item";
 import { useAtom } from "jotai";
 import { currentUserAtom } from "../../modules/auth/current-user.state";
+import { useTheme } from "../../modules/theme/theme.state";
 
 export default function UserItem() {
   const [currentUser, setCurrentUser] = useAtom(currentUserAtom);
+  const { theme, toggleTheme } = useTheme();
 
   const signout = async () => {
     setCurrentUser(undefined);
@@ -45,6 +47,14 @@ export default function UserItem() {
           </div>
         </div>
         <DropdownMenuSeparator />
+        <DropdownMenuItem className="user-item-theme-toggle">
+          {/* 今と逆のモード(切り替え先)を表示する */}
+          <Item
+            label={theme === "dark" ? "ライトモード" : "ダークモード"}
+            icon={theme === "dark" ? FiSun : FiMoon}
+            onClick={toggleTheme}
+          />
+        </DropdownMenuItem>
         <DropdownMenuItem className="user-item-logout">
           <Item label="ログアウト" icon={FiLogOut} onClick={signout} />
         </DropdownMenuItem>

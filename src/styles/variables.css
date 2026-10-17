@@ -35,6 +35,21 @@
   --color-input: hsl(0, 0%, 89.8%);
   --color-ring: hsl(0, 0%, 3.9%);
 
+  /* Semantic Colors (extra: テーマで値が変わる色) */
+  --color-page: #f3f4f6; /* 認証ページの背景 */
+  --color-label: #374151; /* フォームのラベル文字 */
+  --color-sidebar: #f5f5f5;
+  --color-sidebar-active: #e5e5e5;
+  --color-hover: #d4d4d4;
+  --color-button: #0f172a;
+  --color-button-foreground: #ffffff;
+  --color-button-hover: #1e293b;
+  --color-input-border: #d1d5db;
+  --color-placeholder: #9ca3af;
+  --color-ring-glow: rgba(100, 116, 139, 0.1);
+
+  color-scheme: light;
+
   /* Border Radius */
   --radius: 0.5rem;
   --radius-sm: calc(var(--radius) - 4px);
@@ -87,4 +102,41 @@
   --breakpoint-sm: 640px;
   --breakpoint-md: 768px;
   --breakpoint-lg: 1024px;
+}
+
+/* Dark theme: <html data-theme="dark"> のときだけ色を上書きする */
+[data-theme="dark"] {
+  color-scheme: dark;
+
+  --color-title: #e5e5e5;
+
+  --color-background: hsl(0, 0%, 3.9%);
+  --color-foreground: hsl(0, 0%, 98%);
+  --color-card: hsl(0, 0%, 7%);
+  --color-card-foreground: hsl(0, 0%, 98%);
+  --color-popover: hsl(0, 0%, 9%);
+  --color-popover-foreground: hsl(0, 0%, 98%);
+  --color-primary: hsl(0, 0%, 98%);
+  --color-primary-foreground: hsl(0, 0%, 9%);
+  --color-secondary: hsl(0, 0%, 14.9%);
+  --color-secondary-foreground: hsl(0, 0%, 98%);
+  --color-muted: hsl(0, 0%, 14.9%);
+  --color-muted-foreground: hsl(0, 0%, 63.9%);
+  --color-accent: hsl(0, 0%, 14.9%);
+  --color-accent-foreground: hsl(0, 0%, 98%);
+  --color-border: hsl(0, 0%, 18%);
+  --color-input: hsl(0, 0%, 18%);
+  --color-ring: hsl(0, 0%, 83.1%);
+
+  --color-page: hsl(0, 0%, 3.9%);
+  --color-label: #d4d4d4;
+  --color-sidebar: hsl(0, 0%, 8.5%);
+  --color-sidebar-active: hsl(0, 0%, 15%);
+  --color-hover: hsl(0, 0%, 20%);
+  --color-button: hsl(0, 0%, 98%);
+  --color-button-foreground: hsl(0, 0%, 9%);
+  --color-button-hover: hsl(0, 0%, 85%);
+  --color-input-border: hsl(0, 0%, 22%);
+  --color-placeholder: hsl(0, 0%, 50%);
+  --color-ring-glow: rgba(148, 163, 184, 0.25);
 }
